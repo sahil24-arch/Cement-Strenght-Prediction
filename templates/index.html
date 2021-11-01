@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Your chances for Admission</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="cement" id="cement" placeholder="CEMENT">
+            <input type="number" name="blast_furnace_slag" id="blast_furnace_slag" placeholder="BLAST FURNANCE SLAG">
+            <input type="number" name="fly_ash" id="fly_ash" placeholder="FLY ASH">
+            <input type="number" name="water" id="water" placeholder="WATER">
+            <input type="number" name="superplasticizer" id="superplasticizer" placeholder="SUPERPLASTICIZER">
+            <input type="number" name="coarse_aggregate" id="coarse_aggregate"placeholder="COARSE AGGREGATE">
+            <input type="number" name="fine_aggregate" id="fine_aggregate"placeholder="FINE AGGREGATE">
+            <input type="number" name="age" id="age"placeholder="AGE">
+
+</select>
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
+
